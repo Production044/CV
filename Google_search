@@ -11,14 +11,15 @@ n is the number of lines, then the lines themselves in the specified number, the
 Output format:
 The program should display all the entered lines that contain all search queries.
 
-num, lst, lst2,score = int(input()), [], [], 0
+num, lst, lst2,score = int(input("Number of lines: ")), [], [], 0
 for i in range(num):
-  lst.append(input())
-k = int(input())
+	lst.append(input("Your search: "))
+k = int(input("Number of requests: "))
 for j in range(k):
-	lst2.append(input())
+	lst2.append(input("Keywords: "))
+print('Search results: ')
 for _ in range(len(lst)):
-  score = 0
+	score = 0
 	for p in range(len(lst2)):
 		if lst2[p].lower() in lst[_].lower():
 			score += 1
