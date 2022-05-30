@@ -1,0 +1,27 @@
+Google search
+
+The input to the program is a natural number n, then
+n lines, then number k
+k - is the number of search queries, then k lines are the search queries. Write a program that prints out all the input lines that contain all search terms.
+
+Input data format:
+The input to the program is a natural number
+n is the number of lines, then the lines themselves in the specified number, then the number k, then the search queries themselves.
+
+Output format:
+The program should display all the entered lines that contain all search queries.
+
+num, lst, lst2,score = int(input()), [], [], 0
+for i in range(num):
+  lst.append(input())
+k = int(input())
+for j in range(k):
+	lst2.append(input())
+for _ in range(len(lst)):
+  score = 0
+	for p in range(len(lst2)):
+		if lst2[p].lower() in lst[_].lower():
+			score += 1
+		if score == len(lst2):
+			print(lst[_])
+
